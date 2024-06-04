@@ -1,0 +1,167 @@
+  nav{
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  .nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    background-color: transparent;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 2rem;
+    z-index: 4;
+  }
+  
+  .nav .nav-bg {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #000000a8;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+  }
+  
+  .nav .logo a {
+    /* font-family: 'Electrolize', sans-serif; */
+    text-decoration: none;
+    font-size: 2rem;
+    color: #f2531e;
+    margin-left: 1.8rem;
+  }
+  
+  .nav .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.4rem;
+    gap: 2rem;
+    padding-top: 0.5rem;
+  }
+  .nav .links span{
+    position: relative;
+    display: block;
+  }
+  
+  .nav .links span a {
+    text-decoration: none;
+    color: silver;
+    padding: 0.3rem 0.5rem;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .nav .links span a:hover {
+    color: #000000!important;
+  }
+  #mheading {
+display: inline-block;
+font-size: 2rem;
+  }
+  
+  /* Code to add a center animated line below the nav links */
+  .nav .links span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 9px;
+    z-index: -1;
+    width: 100%;
+    margin: auto;
+    height: 22px;
+    background-color: #e0410c;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav .links span:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  
+  .nav .links span.active a::after {
+    width: 100%;
+    transform: scaleX(1);
+  }
+
+  .nav .links:hover > :not(:hover){
+    filter: blur(1px);
+  }
+  
+  .nav .links span.active a {
+    color: #f2531e!important;
+  }
+  
+  .toggle_btn {
+    color: #fff3eb;
+    display: none;
+  }
+  
+  /* Styling for navbar on smaller screens */
+  @media (max-width: 800px) {
+    .nav{
+      gap: 1.2rem;
+    }
+    .nav .links {
+      position: relative;
+      font-size: 1.2rem;
+      gap: 1rem;
+    }
+    #mheading{
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media screen and (max-width: 426px) {
+    .toggle_btn {
+      display: inline;
+      position: absolute;
+      right: 2rem;
+      font-size: 1.7rem;
+    }
+  
+    .nav .links {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.3rem;
+      flex-direction: column;
+      opacity: 0;
+      top: -17rem;
+      z-index: 2;
+      transition: top 0.5s ease-in-out;
+    }
+  
+    .nav .links.linksPos {
+      top: 5.615rem;
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+  
+    .nav .links+.links-bg {
+      position: absolute;
+      top: 4rem;
+      height: 0;
+      width: 110vw;
+      background-color: #000000a8;
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      z-index: -1;
+      transition: height 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  
+    .nav .links+.links-bg.open {
+      /* height: 54vh; */
+      height: 550%;
+    }
+  }
+  

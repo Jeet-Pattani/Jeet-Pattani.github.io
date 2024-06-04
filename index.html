@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" /> -->
+    <meta name="google-site-verification" content="kmpewOc_9_eYPulH1cPxO3zjY5giEWqyobpycilXgfs" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="description" content="A Passionate & Enthusiastic Web DEV">
+    <title>aWebDev | Jeet Pattani</title>
+    <script>
+        setTimeout(function () {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css';
+            document.head.appendChild(link);
+        }, 5000);
+        setTimeout(function () {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'css/footer.css';
+            document.head.appendChild(link);
+        }, 4000);
+    </script>
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+        body{
+            overflow-x: hidden;
+        }
+        .nav .logo a,footer .name,.welcome .cheading h1,.updateText {
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="css/welcome.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/nav.min.css">
+      
+</head>
+
+<body>
+    <div class="welcome-wrapper">
+        <div class="welcome">
+            <canvas id="canvas1"></canvas>
+            <div class="cheading">
+                <h1 id="line1">Hello World!</h1>
+            </div>
+            <br>
+            <div class="cheading">
+                <h1 id="line2">Let's get Coding...</h1>
+            </div>
+            <div class="updateText">
+                <p id="text1">Rendering Structure...</p>
+                <p id="text2">Loading Assets...</p>
+                <p id="text3">Building DOM...</p>
+                <p id="text4">Getting Ready...</p>
+            </div>
+            <div class="loader-wrapper">
+                <div class="loader"></div>
+            </div>
+        </div>
+<script>const t=document.getElementById("canvas1"),i=t.getContext("2d");t.width=window.innerWidth,t.height=window.innerHeight;let h=i.createLinearGradient(0,t.height,t.width,0);h.addColorStop(0,"#ff8400"),h.addColorStop(.2,"#ff8400"),h.addColorStop(.4,"#ff8400"),h.addColorStop(.6,"#ff8400"),h.addColorStop(.8,"#ff8400"),h.addColorStop(1,"#000000a8");class s{constructor(t,i,h,s){this.characters="1234567890!@#$%^&*(){}[-_=+|\\;'\":]<,>.?/~",this.x=t,this.y=i,this.fontSize=h,this.text="",this.canvasHeight=s}draw(t){this.text=this.characters.charAt(Math.floor(Math.random()*this.characters.length)),t.fillText(this.text,this.x*this.fontSize,this.y*this.fontSize),this.y*this.fontSize>this.canvasHeight&&Math.random()>.9?this.y=0:this.y+=1}}const e=new class{constructor(t,i){this.canvasWidth=t,this.canvasHeight=i,this.fontSize=12,this.columns=this.canvasWidth/this.fontSize,this.symbols=[],this.#t()}#t(){for(let t=0;t<this.columns;t++)this.symbols[t]=new s(t,0,this.fontSize,this.canvasHeight)}resize(t,i){this.canvasWidth=t,this.canvasHeight=i,this.columns=this.canvasWidth/this.fontSize,this.symbols=[],this.#t()}}(t.width,t.height);let n=0,o=0;(function s(a){let d=a-n;n=a,o>33.333333333333336?(i.fillStyle="rgba(0,0,0,0.05)",i.textAlign="center",i.fillRect(0,0,t.width,t.height),i.fillStyle="#ff8400a8",i.fillStyle=h,i.font=e.fontSize+"px monospace",e.symbols.forEach((t=>t.draw(i))),o=0):o+=d,requestAnimationFrame(s)})(1),window.addEventListener("resize",(function(){t.width=window.innerWidth,t.height=window.innerHeight,e.resize(t.width,t.height)}));</script>
+    </div>
+    <div class="main-container">
+        <nav class="nav">
+            <div class="nav-bg"></div>
+            <div class="logo"><a href="/">
+                    <h1 id="mheading">aWebDev</h1>
+                </a></div>
+            <div class="links">
+                <span><a href="#home">Home</a></span>
+                <span><a href="#about">About</a></span>
+                <span><a href="#skills">Skills</a></span>
+                <span><a href="#work">Work</a></span>
+                <span><a href="#contact">Contact</a></span>
+                <span><a href="credits">Credits</a></span>
+            </div>
+            <div class="links-bg"></div>
+            <div class="toggle_btn">
+                <img src="images/menu.svg" style="height:40px;width:40px;" alt="mobile menu">
+            </div>
+        </nav>
+        <div class="hero" id="home">
+            <video autoplay loop muted playsinline id="hero-video1" class="hero-video lozad"
+                data-poster="images/hero-bg-3-poster.webp">
+                <!--<source data-src="videos/hero-bg-3.mp4" type="video/webm">-->
+                <source data-src="videos/hero-bg-3.webm" type="video/webm">
+            </video>
+            <div class="text-container">
+                <div class="heading">
+                    <h1>Coding With Purpose</h1>
+                    <div class="typingEffect" style="height:25px;">
+                        <h2 id="typedText" style="display: inline-block;font-weight: 100;"></h2>
+                    </div>
+                </div>
+                <div class="sub-heading">Crafting Engaging Web Experiences to Inspire and Connect
+                </div>
+                <div class="btnWrapper"> <a href="https://github.com/Jeet-Pattani" class="ctaBtns">
+                        <svg width="25px" height="25px" viewBox="0 0 20.00 20.00" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff"
+                            stroke="#ffffff">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <defs> </defs>
+                                <g id="Page-1" stroke-width="0.0002" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)"
+                                        fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path
+                                                d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+                                                id="github-[#142]"> </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        Github
+                    </a>
+                    <a href="https://www.linkedin.com/in/jeet-pattani-a245b2266" class="ctaBtns" id="ambiguity">
+                        <!-- <i class="fa-brands fa-linkedin"></i> -->
+                        <svg width="25px" height="25px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+                            fill="#000000" class="bi bi-linkedin">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z">
+                                </path>
+                            </g>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="himg-wrapper">
+                <div class="himg">
+                    <img id="hero-img" alt="Profile Pic">
+                    <script>
+                        setTimeout(() => {
+                            const imgElement = document.getElementById('hero-img');
+                            imgElement.src = 'images/profile1.webp';
+                        }, 2000); 
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="doubleWrapper">
+            <video autoplay loop muted playsinline class="hero-video lozad" data-poster="images/intro-poster.webp">
+                <source data-src="videos/intro.webm" type="video/webm">
+            </video>
+            <div class="intro" id="about">
+                <h2>I can</h2>
+                <div class="sub-heading">
+                    <h3>Design.</h3>
+                    <h3>Develop.</h3>
+                    <h3>Optimise.</h3>
+                </div>
+                <p>I am a Passionate web developer with a flair for cutting-edge tech. PHP, Node.js, WordPress, UI
+                    design - I've got it covered. Embracing new tech with zest. A team player who creates remarkable
+                    apps, powered by seamless communication. Let's build something cool together.</p>
+            </div>
+            <div class="skills" id="skills">
+                <div class="tabs">
+                    <button class="tab-btn active" id="proficientBtn" data-tab="proficient">Proficient</button>
+                    <button class="tab-btn" id="learnerBtn" data-tab="learner">Learner</button>
+                    <span class="highlight"></span>
+                </div>
+                <div class="tab-content" id="proficient">
+                    <table>
+                        <tr>
+                            <td>CSS</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>GSAP & its Plugins</td>
+                            <td>★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Data Visualisation (amcharts, tv lightweight charts, chartjs, apexcharts)</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Slider Libs (Glide.js, Swiper.js, Swiffy Slider, Slick Slider)</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>PHP</td>
+                            <td>★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Node.js</td>
+                            <td>★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Performance Optimisation</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>MySQL</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>SEO</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Wordpress</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Bootstrap</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Figma</td>
+                            <td>★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Linux(Ubuntu, Kali)</td>
+                            <td>★★★★</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-content" id="learner" style="display: none;    padding-bottom: 5vh;">
+                    <table>
+                        <tr>
+                            <td>React.js</td>
+                            <td>★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Solidity</td>
+                            <td>★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Three.js</td>
+                            <td>★★★</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="work lozad" id="work" data-background-image="images/test.webp">
+            <div class="cards-container">
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <div class="glide__slides">
+
+                            <div class="glide__slide">
+                                <a href="https://aarya.network">
+                                    <div class="card">
+                                        <div class="card-img"><img class="lozad" data-src="images/Project-Aarya.webp"
+                                                alt="">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Project: Aarya</h4>
+                                                <p class="card-content">A new-age crypto which aims to provide a
+                                                    long-term
+                                                    investment opportunity to the HODLERS. It aims to provide
+                                                    transparency
+                                                    and
+                                                    security.</p>
+                                                <p class="extra-info">
+                                                    Tech Stack: CSS,JS, GSAP, Solidity,EtherJS,Hardhat
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="glide__slide">
+                                <a href="https://github.com/Jeet-Pattani/Stock-Prices">
+                                    <div class="card">
+                                        <div class="card-img"><img class="lozad" data-src="images/MONEY-Protocol.webp"
+                                                alt="">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <h4 class="card-title">MONEY Protocol</h4>
+                                                <p class="card-content">A mini-project to fetch live prices of stocks
+                                                    and
+                                                    indices using
+                                                    SmartAPI and sending it to the frontend over an API endpoint</p>
+                                                <p class="extra-info">
+                                                    Tech Stack: Node.js, Express.js, CSS, JS
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="glide__slide">
+                                <a href="https://pointzon.com/">
+                                    <div class="card">
+                                        <div class="card-img"><img class="lozad" data-src="images/Pointzon.webp" alt="">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Pointzon</h4>
+                                                <p class="card-content">A user friendly Crowdfunding Platfrom aimed to
+                                                    providing
+                                                    multiple services to Individuals,Businesses & Charity Org. </p>
+                                                <p class="extra-info">Tech Stack: PHP, MySQL, HTML, CSS, JS</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="glide__slide">
+                                <a href="https://jeet-pattani.github.io/Shehroo_Beta/">
+                                    <div class="card">
+                                        <div class="card-img"><img class="lozad" data-src="images/Shehroo.webp" alt="">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Shehroo</h4>
+                                                <p class="card-content">A Landing Page for a business which provides
+                                                    funky
+                                                    hoodies. It uses subtle animations and hover effects to enhance UI.
+                                                </p>
+                                                <p class="extra-info">
+                                                    Tech Stack: HTML, CSS, JS, GSAP
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="glide__slide">
+                                <a href="/">
+                                    <div class="card">
+                                        <div class="card-img"><img class="lozad" data-src="images/aWebDev.webp" alt="">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <h4 class="card-title">aWebDev</h4>
+                                                <p class="card-content">Portfolio showcasing creative works and highlighting skills and expertise through an interactive and visually appealing website.
+                                                </p>
+                                                <p class="extra-info">
+                                                    Tech Stack: HTML, CSS, JS, GSAP, Three.JS
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footerWrapper">
+                <div class="canvasContainer">
+                    <canvas class="webgl"></canvas>
+                </div>
+                <div class="footerContents">
+
+                    <div class="name">
+                        <h3>Jeet Pattani</h3>
+                    </div>
+
+                    <div class="resumeBtn">
+                        <a href="docs/Resume_Jeet_Pattani.pdf" style="text-decoration: none;"><button class="btn">Get
+                                Resume ↓</button></a>
+                    </div>
+                    <!--<div class="logoWrapper" style="width: 80px;height: 80px;">
+                            <img class="lozad" data-src="images/logo.png" alt="" style="height: 100%;width: 100%;object-fit: cover;border-radius: 50%;">
+                    </div>-->
+                    <div class="credits" id="credits">
+                        <p>This would not be possible without these <a href="credits">people</a>.</p>
+                        <p>Thank You !</p>
+                    </div>
+                    <div class="contact" id="contact">
+                        Let's Get in Touch...
+                    </div>
+                    <div class="icons-container">
+                        <a href="mailto:jeetpattani18@gmail.com">
+                            <div class="icon-circle">
+                                <svg fill="#ffffff" version="1.1" baseProfile="tiny" id="Layer_1"
+                                    xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" width="25px"
+                                    height="25px" viewBox="-0.5 0.5 42 42" xml:space="preserve" stroke="#ffffff">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M40.5,31.5v-18c0,0-18.2,12.7-19.97,13.359C18.79,26.23,0.5,13.5,0.5,13.5v18c0,2.5,0.53,3,3,3h34 C40.029,34.5,40.5,34.061,40.5,31.5z M40.471,9.971c0-1.821-0.531-2.471-2.971-2.471h-34c-2.51,0-3,0.78-3,2.6l0.03,0.28 c0,0,18.069,12.44,20,13.12C22.57,22.71,40.5,10.1,40.5,10.1L40.471,9.971z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Jeet-Pattani">
+                            <div class="icon-circle">
+                                <svg width="25px" height="25px" viewBox="0 0 20.00 20.00" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000" stroke="#000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <defs> </defs>
+                                        <g id="Page-1" stroke-width="0.0002" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview"
+                                                transform="translate(-140.000000, -7559.000000)" fill="#fff">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path
+                                                        d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+                                                        id="github-[#142]"> </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jeet-pattani-a245b2266">
+                            <div class="icon-circle">
+                                <svg width="23px" height="23px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#fff" class="bi bi-linkedin">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> 
+    <!-- 
+    -->
+
+    <!--<script src="js/welcome.anime.min.js"></script>
+    <script src="js/nav.min.js"></script>
+    <script src="js/pageAnimations.min.js"></script>
+    <script src="js/switchTabs.min.js"></script>-->
+    
+    <!-- js to configure typing effect -->
+    <script>
+        var typed = new Typed('#typedText', {
+            strings: ['<i>Code.</i>', '<i>Create.</i>', '<i>Innovate.</i>'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 100,
+            loop: true,
+        });
+    </script>
+    <!-- js to initialize lozadjs -->
+    <script>
+        const observer = lozad(); 
+        observer.observe();
+    </script>
+     <!--<script type="module" src="./js/sphere.js"></script> -->
+    <!-- js to lazy load the threeJS bundle -->
+    
+        <script type="module">
+        // Function to load the three.js bundle and render the sphere
+        function loadThreeJSBundle() {
+            const threeJSContainer = document.querySelector('.footerWrapper');
+
+            // Check if the placeholder div is in the viewport
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Load the three.js bundle dynamically
+                        const script = document.createElement('script');
+                        script.type = 'module';
+                        script.src = 'dist/bundle1.js';
+                        document.body.appendChild(script);
+
+                        // Stop observing once loaded
+                        observer.unobserve(threeJSContainer);
+                    }
+                });
+            });
+
+            // Start observing the placeholder div
+            observer.observe(threeJSContainer);
+        }
+
+        // Wait for the page to fully load before starting the intersection observer
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loadThreeJSBundle();
+            }, 2000);
+        });
+    </script> 
+
+        <!-- js to lazy load glide.js -->
+
+        <script>
+            const skillsContainer = document.getElementById("skills");
+        
+            const glideObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Load Glide.js script
+                        const glideScript = document.createElement('script');
+                        glideScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js';
+                        glideScript.integrity = 'sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q==';
+                        glideScript.crossOrigin = 'anonymous';
+                        glideScript.referrerPolicy = 'no-referrer';
+        
+                        glideScript.onload = () => {
+                            // Initialize Glide.js after script is loaded
+                            setTimeout(() => {
+                                var glide = new Glide('.glide', {
+                                    type: 'carousel',
+                                    gap: 0,
+                                    keyboard: true,
+                                    swipeThreshold: 20,
+                                    dragThreshold: 50,
+                                    perView: 1,
+                                    focusAt: 'center',
+                                    autoplay: 3000,
+                                    hoverpause: true,
+                                });
+        
+                                glide.mount();
+                            }, 100); // Adjust the delay as needed
+                        };
+        
+                        document.head.appendChild(glideScript);
+                    }
+                });
+            });
+        
+            // Start observing the skills container
+            glideObserver.observe(skillsContainer);
+        </script>
+       <!-- <script src="js/welcome.anime.js"></script>-->
+   
+     <script src="dist/bundle2.js"></script>
+</body>
+</html>
