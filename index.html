@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" /> -->
+    <meta http-equiv="Expires" content="0" />
     <meta name="google-site-verification" content="kmpewOc_9_eYPulH1cPxO3zjY5giEWqyobpycilXgfs" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -16,12 +16,12 @@
     <meta name="description" content="A Passionate & Enthusiastic Web Dev">
     <title>aWebDev</title>
     <script>
-        setTimeout(function () {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css';
-            document.head.appendChild(link);
-        }, 5000);
+        // setTimeout(function () {
+        //     var link = document.createElement('link');
+        //     link.rel = 'stylesheet';
+        //     link.href = 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css';
+        //     document.head.appendChild(link);
+        // }, 5000);
         setTimeout(function () {
             var link = document.createElement('link');
             link.rel = 'stylesheet';
@@ -42,6 +42,10 @@
     <link rel="stylesheet" href="css/welcome.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/nav.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css" integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider-extensions.min.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous"> -->
       
 </head>
 
@@ -66,7 +70,7 @@
                 <div class="loader"></div>
             </div>
         </div>
-<script>const t=document.getElementById("canvas1"),i=t.getContext("2d");t.width=window.innerWidth,t.height=window.innerHeight;let h=i.createLinearGradient(0,t.height,t.width,0);h.addColorStop(0,"#ff8400"),h.addColorStop(.2,"#ff8400"),h.addColorStop(.4,"#ff8400"),h.addColorStop(.6,"#ff8400"),h.addColorStop(.8,"#ff8400"),h.addColorStop(1,"#000000a8");class s{constructor(t,i,h,s){this.characters="1234567890!@#$%^&*(){}[-_=+|\\;'\":]<,>.?/~",this.x=t,this.y=i,this.fontSize=h,this.text="",this.canvasHeight=s}draw(t){this.text=this.characters.charAt(Math.floor(Math.random()*this.characters.length)),t.fillText(this.text,this.x*this.fontSize,this.y*this.fontSize),this.y*this.fontSize>this.canvasHeight&&Math.random()>.9?this.y=0:this.y+=1}}const e=new class{constructor(t,i){this.canvasWidth=t,this.canvasHeight=i,this.fontSize=12,this.columns=this.canvasWidth/this.fontSize,this.symbols=[],this.#t()}#t(){for(let t=0;t<this.columns;t++)this.symbols[t]=new s(t,0,this.fontSize,this.canvasHeight)}resize(t,i){this.canvasWidth=t,this.canvasHeight=i,this.columns=this.canvasWidth/this.fontSize,this.symbols=[],this.#t()}}(t.width,t.height);let n=0,o=0;(function s(a){let d=a-n;n=a,o>33.333333333333336?(i.fillStyle="rgba(0,0,0,0.05)",i.textAlign="center",i.fillRect(0,0,t.width,t.height),i.fillStyle="#ff8400a8",i.fillStyle=h,i.font=e.fontSize+"px monospace",e.symbols.forEach((t=>t.draw(i))),o=0):o+=d,requestAnimationFrame(s)})(1),window.addEventListener("resize",(function(){t.width=window.innerWidth,t.height=window.innerHeight,e.resize(t.width,t.height)}));</script>
+    <script src="js/matrix-effect.min.js"></script>
     </div>
     <div class="main-container">
         <nav class="nav">
@@ -519,8 +523,23 @@
     </script> 
 
         <!-- js to lazy load glide.js -->
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
+        var glide = new Glide('.glide', {
+                type: 'slider',
+                gap: 0,
+                keyboard: true,
+                swipeThreshold: 50,
+                dragThreshold: 50,
+                perView: 1,
+                focusAt: 'center',
+                autoplay: 3000,
+                hoverpause: true,
+            });
+
+            glide.mount();
+        </script>
+        <!-- <script>
             const skillsContainer = document.getElementById("skills");
         
             const glideObserver = new IntersectionObserver((entries) => {
@@ -559,7 +578,7 @@
         
             // Start observing the skills container
             glideObserver.observe(skillsContainer);
-        </script>
+        </script> -->
        <!-- <script src="js/welcome.anime.js"></script>-->
    
      <script src="dist/bundle2.js"></script>

@@ -228,8 +228,8 @@ background-color: #d3c6bc;
 }
 
 .hero .himg{
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     aspect-ratio: 1/1;
     overflow: hidden;
     position: relative;
