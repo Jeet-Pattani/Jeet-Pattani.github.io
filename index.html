@@ -167,9 +167,9 @@
                     <h3>Develop.</h3>
                     <h3>Optimise.</h3>
                 </div>
-                <p>I am a Passionate web developer with a flair for cutting-edge tech. PHP, Node.js, WordPress, UI
-                    design - I've got it covered. Embracing new tech with zest. A team player who creates remarkable
-                    apps, powered by seamless communication. Let's build something cool together.</p>
+                <p>
+                I'm an enthusiastic and curious engineer. Python, JS, Node.js, React.js, Solidity, Java, PHP, Laravel, UI/UX, Figma, Webflow and much more! - You name it and I got you covered. A team player who aims to create the best experience, whether frontend or backend. I invite you, Let's develop the best app together.
+                </p>
             </div>
             <div class="skills" id="skills">
                 <div class="tabs">
@@ -386,8 +386,8 @@
                     </div>
 
                     <div class="resumeBtn">
-                        <a href="docs/CV_Jeet_Pattani.pdf" style="text-decoration: none;"><button class="btn">Get
-                                CV ↓</button></a>
+                        <a href="docs/Resume_Jeet_Pattani_Fullstack_Developer.pdf" style="text-decoration: none;"><button class="btn">Get
+                                Resume ↓</button></a>
                     </div>
                     <!--<div class="logoWrapper" style="width: 80px;height: 80px;">
                             <img class="lozad" data-src="images/logo.png" alt="" style="height: 100%;width: 100%;object-fit: cover;border-radius: 50%;">
@@ -463,6 +463,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> 
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
+    <script>
+        const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+    </script>
+
+    <style>
+        html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+    </style>
     <!-- 
     -->
 
